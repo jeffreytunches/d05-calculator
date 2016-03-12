@@ -1,0 +1,26 @@
+body {
+   font-family: 'Fjalla One', sans-serif;
+}
+
+p {
+  height: 15px;
+  background-color: white;
+  width: 106px;
+}
+
+table {
+  background-color: #309696;
+  opacity: .60;
+  border-radius: 1em;
+  padding: 11px;
+}
+
+section {
+ background-image: url("http://img13.deviantart.net/cf69/i/2009/200/5/c/grunge_paper_texture_by_arghus.jpg");
+ width: 136px;
+
+}
+
+div {
+  color: white;
+}

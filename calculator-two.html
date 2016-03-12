@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>T3chN9ne Calculator</title>
+     <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+
+
+
+<!-- Above we attached a function to 'An element' that will fire when a user clicks on it   -->
+<!-- Below, attach an event handler,   -->
+<section>
+<div id='frame'>
+
+<table>
+      <tr>
+        <td colspan="2">T3ch N9ne - - -</td>
+      <tr>
+      <td><p><div id="display" Display maxlength="40" size="30" name="Display"></div></p></td>
+      </tr>
+</table>
+<table>
+      </tr>
+      <tr>
+         <td><input id='clear' type="button" value="C"></td>
+       </tr>
+       <tr>
+         <td><input id='one' type="button" value="1"></td>
+         <td><input id='two' type="button" value="2"></td>
+         <td><input id='three' type="button" value="3"></td>
+         <td><input id='plus' type="button" value="+"></td>
+       </tr>
+       <tr>
+         <td><input id='four' type="button" value="4"></td>
+         <td><input id='five' type="button" value="5"></td>
+         <td><input id='six' type="button" value="6"></td>
+         <td><input id='minus' type="button" value="-"></td>
+       </tr>
+       <tr>
+         <td><input id='seven' type="button" value="7"></td>
+         <td><input id='eight' type="button" value="8"></td>
+         <td><input id='nine' type="button" value="9"></td>
+         <td><input id='multiply' type="button" value="*"></td>
+       </tr>
+       <tr>
+        <td><input id='zero' type="button" value="0"></td>
+        <td><input id='decimal' type="button" value="."></td>
+        <td><input id='equal' type="button" value="="></td>
+        <td><input id='divide' type="button" value="/"></td>
+       </tr>
+      </table>
+    </td>
+    <td>
+</div>
+</section>
+
+
+<script>
+//we get a hold of an element using its 'id' attribute
+var el  = document.getElementById('elem');
+
+var one = document.getElementById('one');
+var two = document.getElementById('two');
+var three = document.getElementById('three');
+var four = document.getElementById('four');
+var five = document.getElementById('five');
+var six = document.getElementById('six');
+var seven = document.getElementById('seven');
+var eight = document.getElementById('eight');
+var nine = document.getElementById('nine');
+var zero = document.getElementById('zero');
+
+var decimal = document.getElementById('decimal');
+var plus = document.getElementById('plus');
+var minus = document.getElementById('minus');
+var multiply = document.getElementById('multiply');
+var divide = document.getElementById('divide');
+var equal = document.getElementById('equal');
+
+var display = document.getElementById('display');
+var clear = document.getElementById('clear');
+
+var subTotal = " "
+var outputTotal = 0
+var userEntry = " "
+
+
+    //we add a click function that will fire when a user clicks on the element
+
+   one.addEventListener('click',function(){
+       display.innerHTML += "1";
+
+    });
+
+   two.addEventListener('click',function(){
+      display.innerHTML += "2";
+
+    });
+
+    three.addEventListener('click',function(){
+      display.innerHTML += "3";
+
+    });
+
+    four.addEventListener('click',function(){
+      display.innerHTML += "4";
+
+    });
+
+    five.addEventListener('click',function(){
+      display.innerHTML += "5";
+
+    });
+
+    six.addEventListener('click',function(){
+      display.innerHTML += "6";
+
+    });
+
+    seven.addEventListener('click',function(){
+      display.innerHTML += "7";
+
+    });
+
+   eight.addEventListener('click',function(){
+      display.innerHTML += "8";
+
+    });
+
+    nine.addEventListener('click',function(){
+      display.innerHTML += "9";
+
+    });
+
+    zero.addEventListener('click',function(){
+      display.innerHTML += "0";
+
+    });
+
+      plus.addEventListener('click',function(){
+        display.innerHTML += "+";
+
+    });
+
+    minus.addEventListener('click',function(){
+        display.innerHTML += "-";
+
+    });
+
+    multiply.addEventListener('click',function(){
+        display.innerHTML += "*";
+
+    });
+
+    divide.addEventListener('click',function(){
+        display.innerHTML += "/";
+
+    });
+
+    /*
+    decimal.addEventListener('click',function(){
+        display.innerHTML += ".";
+
+    });
+    */
+
+    equal.addEventListener('click',function(){
+      if (display.innerHTML.indexOf('+') !==-1) {
+       userEntry = display.innerHTML.split('+')
+       outputTotal = parseInt(userEntry[0]) + parseInt(userEntry[1])
+       display.innerHTML = outputTotal.toString()
+      }
+      else if (display.innerHTML.indexOf('-') !==-1) {
+       userEntry = display.innerHTML.split('-')
+       outputTotal = parseInt(userEntry[0]) - parseInt(userEntry[1])
+       display.innerHTML = outputTotal.toString()
+      }
+      else if (display.innerHTML.indexOf('*') !==-1) {
+       userEntry = display.innerHTML.split('*')
+       outputTotal = parseInt(userEntry[0]) * parseInt(userEntry[1])
+       display.innerHTML = outputTotal.toString()
+      }
+       else if (display.innerHTML.indexOf('/') !==-1) {
+       userEntry = display.innerHTML.split('/')
+       outputTotal = parseInt(userEntry[0]) / parseInt(userEntry[1])
+       display.innerHTML = outputTotal.toString()
+      }
+    });
+
+
+    clear.addEventListener('click',function(){
+        display.innerHTML = " ";
+
+    });
+
+
+
+
+
+</script>
+</body>
+</html>
