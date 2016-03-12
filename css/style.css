@@ -1,5 +1,7 @@
 body {
    font-family: 'Fjalla One', sans-serif;
+   background-image:  url("https://farm8.staticflickr.com/7412/9146673008_38031060bb_o_d.jpg");
+   background-size:cover;
 }
 
 p {
@@ -9,6 +11,7 @@ p {
 }
 
 table {
+  margin: 0 auto;
   background-color: #309696;
   opacity: .60;
   border-radius: 1em;
@@ -16,9 +19,9 @@ table {
 }
 
 section {
+ margin: 0 auto;
  background-image: url("http://img13.deviantart.net/cf69/i/2009/200/5/c/grunge_paper_texture_by_arghus.jpg");
  width: 136px;
-
 }
 
 div {
